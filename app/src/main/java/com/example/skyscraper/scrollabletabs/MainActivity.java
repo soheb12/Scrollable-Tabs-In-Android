@@ -13,6 +13,8 @@ public class MainActivity extends FragmentActivity {
 
 
     ViewPager viewPager;
+    PagerTitleStrip pagerTitleStrip;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,12 @@ public class MainActivity extends FragmentActivity {
         viewPager = (ViewPager) findViewById(R.id.pager);
 
         viewPager.setAdapter(new MyAdapter(getSupportFragmentManager()));
+        
+        pagerTitleStrip = findViewById(R.id.pagerTitle);
+
+        pagerTitleStrip.setTextColor(Color.BLACK);
+        pagerTitleStrip.setNonPrimaryAlpha(0.3f);
+        pagerTitleStrip.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
     }
 
 
